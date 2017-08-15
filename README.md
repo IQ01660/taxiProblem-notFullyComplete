@@ -34,8 +34,8 @@ namespace taxiProblem_15._08._2017
                 minDist = third.distance;
             }
             var ikram = new Customer(0, 0);
-            ikram.CallTaxi();
-            Console.WriteLine("The nearest taxi is {0} m away it will cost you {1} $", minDist,3*minDist/10);
+            
+            Console.WriteLine("The nearest taxi is {0} m away it will cost you {1} $", ikram.CallTaxi(minDist),3*ikram.CallTaxi(minDist)/10);
            
         }
     }
@@ -67,10 +67,11 @@ namespace taxiProblem_15._08._2017
             this.xCoorCust = _xCust;
             this.yCoorCust = _yCust;
         }
-        public void CallTaxi()
+        public double CallTaxi(double _mindist)
         {
-            Console.WriteLine(Console.ReadLine());
+            return _mindist;
         }
     }
 }
+
 ```
